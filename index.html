@@ -1,55 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <title> Photography | William Jackman </title>
-    <link href="css/stylesheetphotowj.css" type="text/css" rel="stylesheet"> 
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | SpaceShooter</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>  
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Space-Shooter-v2.json", {onProgress: UnityProgress});
+    </script>
   </head>
   <body>
-    <header>
-    <h1 id='title'>Welcome.</h1>
-    </header>
-    <main>
-      <div id="loc1" class="loc">    <!-- i.e. box for London locations-->
-        <div class="folder"> 
-          <h2> London </h2>
-          <ul class="specific-locs">
-            <li> <a href="regentsPark/index.html"> Regents Park <a> </li>
-            <li> <a href="theRoyalOperaHouse/index.html"> The Royal Opera House <a> </li>
-            <li> <a href="GreenwichPark/index.html"> Greenwich Park <a> </li>
-          </ul>
-        </div>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 600px; height: 900px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">SpaceShooter</div>
       </div>
-      <div id="loc2" class="loc">    <!-- new box for New Zealand locations etc-->
-        <div class="folder"> 
-          <h2> New Zealand </h2>
-          <ul class="specific-locs">
-            <li> <a href="milfordSound/index.html"> Milford Sound <a> </li>
-            <li> <a href="queenstown/index.html"> Queenstown <a> </li>
-            <li> <a href="hokitika/index.html"> Hokitika <a> </li>
-            <li> <a href="nelson/index.html"> Nelson <a> </li>
-            <li> <a href="wellington/index.html"> Wellington <a> </li>
-            <li> <a href="tongariroNationalPark/index.html"> Tongariro National Park <a> </li>
-            <li> <a href="southIslandRandoms/index.html"> South Island Randoms <a> </li>
-            <li> <a href="northIslandRandoms/index.html"> North Island Randoms <a> </li>
-          </ul>
-        </div>
-      </div>
-      <div id="loc3" class="loc">
-        <div class="folder"> 
-          <h2> Other </h2>
-            <ul class="specific-locs">
-              <li> Budapest </li>
-              <li> Randoms </li>
-              <li> Contemporary </li>
-           </ul>
-        </div>
-      </div>
-    </main>
-    <footer id="welcomePageFooter">
-      <p>Contact information: <a class="f-link" href="mailto:someone@example.com">
-         someone@example.com</a>.</p>
-    </footer>  
-    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-    <script src='js/main.js'></script>
+    </div>
   </body>
 </html>
