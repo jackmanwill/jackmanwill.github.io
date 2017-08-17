@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0px solid rgba(255,255,255,1);
+}
+
+.standardBackground {
+  height: 93.75vh; /*750px*/
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  z-index: 0;
+}
+
+#home.standardBackground {
+  background-image: url('../images/background.jpg');
+}
+
+#running.standardBackground {
+  background-image: url('../running/images/background.jpg');
+}
+
+#gallery.standardBackground {
+  background-image: url('../gallery/images/background.jpg');
+  background-position: bottom center;
+}
+
+.backgroundTitle {
+  color: rgba(10, 10, 20, 0.5);
+  font-size: 42px;
+  font-variant: small-caps; 
+  text-align: center;
+  padding-top: 22.5vh; /*180px*/
+  padding-bottom: 1.25vh;
+}
+
+.backgroundTitle a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: Baskerville, serif; 
+}
+
+main {
+  background-color: rgb(20, 25, 30);
+  color: rgb(152, 145, 150);
+  position: relative;
+  z-index: 1000;
+}
+
+main h1 {
+  padding-top: 7.5vh;
+  text-align: center;
+}
+
+main p {
+  width: 70%;
+  margin: auto auto;
+  text-align: justify;
+  font-size: 16pt;
+  padding: 5vh 0px 7.5vh 0px;
+}
+
+/*
+.popNavigator {
+  width: 100%;
+  text-align: center;
+  padding-top: 3.125vh; 
+  position: absolute;
+}
+*/
+
+.popNavigator {
+  width: 100%;
+  text-align: center; 
+  position: absolute;
+  top: 96.825vh;
+  z-index: 1500;
+}
+
+
+.linkedBoxes {
+  font-size: 0; /*eliminates gap between boxes*/
+}
+
+.linkedBoxes ul {
+  width: 95%;
+  list-style-type: none;
+  overflow: hidden;
+  text-align: center;
+  margin: auto auto;
+}
+
+#runningBox {
+  background: url("../images/running.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+
+#galleryBox {
+  background: url("../images/gallery.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#mathsBox {
+  background: url("../images/maths.png") no-repeat center center;
+  background-size: cover;
+}
+
+#codeBox {
+  background: url("../images/code.png") no-repeat center center;
+  background-size: cover;
+}
+
+#nzBox {
+  background: url("../gallery/images/nz.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#londonBox {
+  background: url("../gallery/images/london.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#brugesBox {
+  background: url("../gallery/images/bruges.jpg") no-repeat right bottom;
+  background-size: cover;
+}
+
+#athleticsBox {
+  background: url("../gallery/images/athletics.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.linkedBox {
+  font-size: 16pt;
+  color: white;
+  text-align: center;
+  width: 20%;
+  padding-top: 20%;
+  margin: 0% 2.5%;
+  position: relative;
+  display: inline-block;
+}
+
+.linkedBox, .linkedBoxWriting{
+  border-radius: 4px;
+}
+
+.linkedBoxWriting {
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background-color: rgba(4, 5, 10, 0.7);  /*shades background*/
+  text-align: center;
+  position: absolute;
+}
+
+.unShaded {
+  background-color: rgba(4, 5, 10, 0.2);
+}
+
+#mathsBox .unShaded {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.linkedBoxWriting h2 {
+  text-transform: uppercase;
+  padding-top: 45%;
+}
+
+.blogLibrary {
+  width: 90%;
+  margin: 0 5%;  /*left/right should be consistent with the width i.e (100-width)/2*/
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.blogLibrary ul {
+  width: 29%;
+  list-style-type: none;
+  float: left;
+  margin: 2%;        /* "margin * (number of 'books' +2) + width * number of books" must be less than 100.*/
+}
+
+.blogLibrary ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(160, 200, 240, 0.8);
+}
+
+li.bookTitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+
+.blogLibrary ul li:not(.bookTitle) {
+  text-align: left;
+  padding-top: 0.5em;
+}
+
+.blogLibrary {
+  display: inline-block;
+}
