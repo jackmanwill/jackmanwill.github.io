@@ -215,7 +215,7 @@ li.bookTitle {
 }
 
 /* for devices with display width less than, or equal to, 480px... */
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) and {
     .backgroundTitle {
       font-size: 7vw;
     }
@@ -224,16 +224,18 @@ li.bookTitle {
       font-size: 5vw;
     }
     
-    .linkedBox {
-      width: 40%;
-      padding-top: 40%;
-      margin: 0 5% 5% 5%;
-    }
-    
     main p {
       font-size: 4vw;
     }
     main h1 {
      font-size: 6vw; 
+    }
+  }
+  
+@media only screen and (max-device-width: 480px) and (orientation: poortrait) {
+      .linkedBox {
+      width: 40%;
+      padding-top: 40%;
+      margin: 0 5% 5% 5%;
     }
   }
