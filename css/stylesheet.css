@@ -232,7 +232,7 @@ li.bookTitle {
     }
   }
   
-@media only screen and (max-device-width: 480px) and (orientation: poortrait) {
+@media only screen and (max-device-width: 480px) and (orientation : portrait) {
       .linkedBox {
       width: 40%;
       padding-top: 40%;
