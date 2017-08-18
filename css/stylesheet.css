@@ -9,7 +9,7 @@
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: top center;
   z-index: 0;
 }
@@ -216,6 +216,11 @@ li.bookTitle {
 
 /* for devices with display width less than, or equal to, 480px... */
 @media only screen and (max-device-width: 480px) and {
+
+    .standardBackground {
+      background-attachment: fixed; /*'cover' doesn't work for iphones sadly*/
+    }
+    
     .backgroundTitle {
       font-size: 7vw;
     }
@@ -228,7 +233,7 @@ li.bookTitle {
       font-size: 8vw;
     }
     main h1 {
-     font-size: 12vw; 
+      font-size: 12vw; 
     }
     
   }
