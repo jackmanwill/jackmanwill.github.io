@@ -75,18 +75,10 @@ main p {
   width: 70%;
   margin: auto auto;
   text-align: justify;
-  font-size: 16pt;
+  font-size: 2.5vw;
+  overflow: scroll;
   padding: 5vh 0px 7.5vh 0px;
 }
-
-/*
-.popNavigator {
-  width: 100%;
-  text-align: center;
-  padding-top: 3.125vh; 
-  position: absolute;
-}
-*/
 
 .popNavigator {
   width: 100%;
@@ -150,7 +142,6 @@ main p {
 }
 
 .linkedBox {
-  font-size: 16pt;
   color: white;
   text-align: center;
   width: 20%;
@@ -174,17 +165,18 @@ main p {
   position: absolute;
 }
 
+.linkedBoxWriting h2 {
+  font-size: 3vw;
+  text-transform: uppercase;
+  padding-top: 45%;
+}
+
 .unShaded {
   background-color: rgba(4, 5, 10, 0.2);
 }
 
 #mathsBox .unShaded {
   background-color: rgba(0, 0, 0, 0.35);
-}
-
-.linkedBoxWriting h2 {
-  text-transform: uppercase;
-  padding-top: 45%;
 }
 
 .blogLibrary {
@@ -221,3 +213,27 @@ li.bookTitle {
 .blogLibrary {
   display: inline-block;
 }
+
+/* for devices with display width less than, or equal to, 480px... */
+@media only screen and (max-device-width: 480px) {
+    .backgroundTitle {
+      font-size: 7vw;
+    }
+    
+    h3 {
+      font-size: 5vw;
+    }
+    
+    .linkedBox {
+      width: 40%;
+      padding-top: 40%;
+      margin: 0 5% 5% 5%;
+    }
+    
+    main p {
+      font-size: 4vw;
+    }
+    main h1 {
+     font-size: 6vw; 
+    }
+  }

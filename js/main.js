@@ -4,6 +4,7 @@ $.get("../navigation.html", function(data){
 });
 
 const titleFontSize = parseInt($('.backgroundTitle').css("font-size")); //store the title font size
+const mobileWidth = 480
 
 $(window).scroll(function() {
   //how far the user has scrolled (in px)
@@ -24,10 +25,26 @@ $(window).scroll(function() {
     var data = $(this).data('superscroll');
     var acceleratedSpeed = parseFloat(data[0]);
     var regularSpeed = parseFloat(data[1]);
-    var transitionPoint = parseFloat(data[2]);
-    var scrollFixedPoint = parseFloat(data[3]);
+    var fixedSpeed = parseFloat(data[2]);
+    var transitionPoint = parseFloat(data[3]);
+    var scrollFixedPoint = parseFloat(data[4]);
+    //if popNavigator displays as 2x2 we alter the accelerated speed to ensure bottom row scrolls far enough
+    if ($(window).width()<mobileWidth)
+    {
+      //if portrait - not needed yet since haven't decided what to do for landscape - but it works so that's something 
+      if ($(window).width()<$(window).height())
+      {
+        if ($(this).hasClass("linkedBoxes"))
+        {
+          acceleratedSpeed = acceleratedSpeed*1.5;
+        }
+        if ($(this).hasClass("subTitle"))
+        {
+          transitionPoint = transitionPoint/4;
+        }
+      }
+    }
     
-    var fixedSpeed = -1;
     if (scrollTop<transitionPoint)
     {
   	  var newYPos = - scrollTop*acceleratedSpeed*windowHeight;
@@ -53,7 +70,6 @@ $(window).scroll(function() {
   {
     $('.popNavigator').css({'z-index': "1500"});
   }
-  
 });
   	  
 $('.linkedBoxWriting').hover(function() {
