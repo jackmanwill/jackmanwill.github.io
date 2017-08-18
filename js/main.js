@@ -84,3 +84,8 @@ $('.linkedBoxWriting').click(function() {                   /*bug fix - resets b
   $(this).removeClass("unShaded");
   $(this).find('.boxTitle').css({"padding-top": "45%"});
 });
+
+$('.bookTitle').click(function() {
+  $(this).siblings().toggle(400);
+  $(this).parent().siblings().children().not('.bookTitle').hide(1200);
+});

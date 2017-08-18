@@ -182,15 +182,23 @@ main p {
 .blogLibrary {
   width: 90%;
   margin: 0 5%;  /*left/right should be consistent with the width i.e (100-width)/2*/
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.4);
   border-radius: 10px;
 }
 
 .blogLibrary ul {
-  width: 29%;
+  width: 33%;
   list-style-type: none;
   float: left;
-  margin: 2%;        /* "margin * (number of 'books' +2) + width * number of books" must be less than 100.*/
+  margin: .5% 0;
+  padding: 1% 0;
+  border-left: 1px solid black;
+  border-color: rgba(10, 20, 30, 0.5);
+
+}
+
+#first {
+  border: none;
 }
 
 .blogLibrary ul li a {
@@ -206,8 +214,10 @@ li.bookTitle {
 }
 
 .blogLibrary ul li:not(.bookTitle) {
+  display: none;
   text-align: left;
   padding-top: 0.5em;
+  margin-left: 0.5em;
 }
 
 .blogLibrary {
