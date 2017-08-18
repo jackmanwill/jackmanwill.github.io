@@ -225,10 +225,10 @@ li.bookTitle {
     }
     
     main p {
-      font-size: 4vw;
+      font-size: 8vw;
     }
     main h1 {
-     font-size: 6vw; 
+     font-size: 12vw; 
     }
     
   }
@@ -241,6 +241,6 @@ li.bookTitle {
     }
     
     .linkedBoxWriting h2 {
-      font-size: 4vw;
+      font-size: 6vw;
     }
   }
