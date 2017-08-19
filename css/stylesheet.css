@@ -69,13 +69,14 @@ main {
 main h1 {
   padding-top: 7.5vh;
   text-align: center;
+  font-size: 3vw;
 }
 
 main p {
   width: 70%;
   margin: auto auto;
   text-align: justify;
-  font-size: 2.5vw;
+  font-size: 2vw;
   overflow: scroll;
   padding: 5vh 0px 7.5vh 0px;
 }
@@ -224,11 +225,24 @@ li.bookTitle {
   display: inline-block;
 }
 
+form {
+  width: 50%;
+  margin:auto auto;
+}
+
+form * {
+    border: 0px solid white;
+}
+
+select {
+  width: 75px;  /* preferably in ems... fix later once font-size seen to*/
+}
+
 /* for devices with display width less than, or equal to, 480px... */
 @media only screen and (max-device-width: 480px) and {
 
     .standardBackground {
-      background-attachment: fixed; /*'cover' doesn't work for iphones sadly*/
+      background-position: scroll; /*'fixed' doesn't work for iphones sadly - gives problems with background 'cover' sizing*/
     }
     
     .backgroundTitle {

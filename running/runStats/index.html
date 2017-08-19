@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Running | William Jackman</title>
+    <link href="../../css/stylesheet.css" type="text/css" rel="stylesheet" >
+  </head>
+  <body>
+    <div class=standardBackground id=running>
+  	    <h1 class=backgroundTitle><a href="../index.html">WILLIAM JACKMAN</a></h1>
+  	    <h3 class="subTitle superscroll" data-superscroll='["-0", "-0.2", "-0.5", "0.216", "0.216"]'>Running stats calculator.</h3>  
+    </div>
+    <div class="superscroll runStatsForm popNavigator" data-superscroll='["3", "0", "-0.5", "0.19", "0.26"]'> 
+      <form method="post">
+        <table>
+          <!-- Distance -->
+          <tr>
+            <td>Distance:</td>
+            <td>
+              <input type="text" size="10" maxlength="10" id="dist">
+            </td>
+            <td>
+              <select id=dUnits>
+                <option value="1.609344">Miles</option>
+                <option value="1">Kilometers</option>
+              </select>
+            </td>
+            <td>
+              <input type="button" value="Find Distance" onclick="findDistance();">
+            </td>
+          </tr>
+          <!--Time-->
+          <tr>
+            <td>Time:</td>
+            <td colspan="2">
+              <table>
+                <tr>
+                  <td>Hours</td>
+                  <td>Mins</td>
+                  <td>Secs</td>
+                  </tr>
+                <tr>
+                  <td><input id=thr  type="text" size="3"  maxlength="3"></td>
+                  <td><input id=tmin type="text" size="3"  maxlength="2"></td>
+                  <td><input id=tsec type="text" size="10" maxlength="10"></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <input type="button" value="Find Time" onclick="findTime();">
+            </td>  
+          </tr>
+          <!--Pace-->
+          <tr>
+            <td>Pace:</td>
+            <td colspan="2">
+              <table>
+                <tr>
+                  <td>Hours</td>
+                  <td>Mins</td>
+                  <td colspan=>Secs</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input id=phr  type="text" size="3"  maxlength="3"></td>
+                  <td><input id=pmin type="text" size="3"  maxlength="2"></td>
+                  <td><input id=psec type="text" size="10" maxlength="10"></td>
+                  <td>
+                    <select id=pUnits>
+                      <option value="1.609344">per mile</option>
+                      <option value="1">per kilometer</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>  
+            </td>
+            <td><input type="button" value="Find Pace" onclick="findPace();"></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="Reset" onclick="var thisform=document.forms[0]; thisform.reset()"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <main>
+      <h1>Because mod 60 is too difficult with tired legs</h1>
+      <p>Above is a basic running calculator. Hitting a 'find' button will calculate the desired field so long as the other two are filled in! Change the mile/km preferences as needed.</p>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script src='../../js/main.js'></script>
+    <script src='../../js/runStats.js' type="text/javascript" language="JavaScript">
+    </script>
+  </body>
+</html>
