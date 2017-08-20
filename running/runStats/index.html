@@ -11,27 +11,52 @@
     </div>
     <div class="superscroll runStatsForm popNavigator" data-superscroll='["3", "0", "-0.5", "0.19", "0.26"]'> 
       <form method="post">
-        <table>
-          <!-- Distance -->
-          <tr>
+        <table class=stats>
+          <!-- Distance --> 
+          <tr id=distance>
+            <!-- Title -->
             <td>Distance:</td>
+            <!-- Data Section -->
             <td>
-              <input type="text" size="10" maxlength="10" id="dist">
+              <table>
+                <tr>
+                  <td>
+                    <input type="text" maxlength="10" id="dist">
+                  </td>
+                  <td>
+                    <select id=dUnits onchange="updateUnits();">
+                      <option value="1.609344">Miles</option>
+                      <option value="1">Kms</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td>
+                      Or select distance...
+                  </td>
+                  <td>
+                    <select id=predefinedDistances onChange="distanceSelected();">
+                      <option selected="selected">none selected</option>
+                      <option value="5">5K</option>
+                      <option value="10">10K</option>
+                      <option value="21.0975">Half Marathon</option>
+                      <option value="42.195">Marathon</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
             </td>
-            <td>
-              <select id=dUnits>
-                <option value="1.609344">Miles</option>
-                <option value="1">Kilometers</option>
-              </select>
-            </td>
-            <td>
-              <input type="button" value="Find Distance" onclick="findDistance();">
+            <!-- Find Button -->
+            <td class=findBtn>
+              <input type="button" value="Find" onclick="findDistance();">
             </td>
           </tr>
           <!--Time-->
-          <tr>
+          <tr id=time>
             <td>Time:</td>
-            <td colspan="2">
+            <td>
               <table>
                 <tr>
                   <td>Hours</td>
@@ -39,41 +64,41 @@
                   <td>Secs</td>
                   </tr>
                 <tr>
-                  <td><input id=thr  type="text" size="3"  maxlength="3"></td>
-                  <td><input id=tmin type="text" size="3"  maxlength="2"></td>
-                  <td><input id=tsec type="text" size="10" maxlength="10"></td>
+                  <td><input id=thr  type="text" maxlength="3"></td>
+                  <td><input id=tmin type="text" maxlength="2"></td>
+                  <td><input id=tsec type="text" maxlength="10"></td>
                 </tr>
               </table>
             </td>
-            <td>
-              <input type="button" value="Find Time" onclick="findTime();">
+            <td class=findBtn>
+              <input type="button" value="Find" onclick="findTime()">
             </td>  
           </tr>
           <!--Pace-->
-          <tr>
+          <tr id=pace>
             <td>Pace:</td>
-            <td colspan="2">
+            <td>
               <table>
                 <tr>
                   <td>Hours</td>
                   <td>Mins</td>
-                  <td colspan=>Secs</td>
-                  <td></td>
+                  <td>Secs</td>
+                  <td>per:</td>
                 </tr>
                 <tr>
-                  <td><input id=phr  type="text" size="3"  maxlength="3"></td>
-                  <td><input id=pmin type="text" size="3"  maxlength="2"></td>
-                  <td><input id=psec type="text" size="10" maxlength="10"></td>
+                  <td><input id=phr  type="text" maxlength="3"></td>
+                  <td><input id=pmin type="text" maxlength="2"></td>
+                  <td><input id=psec type="text" maxlength="10"></td>
                   <td>
-                    <select id=pUnits>
-                      <option value="1.609344">per mile</option>
-                      <option value="1">per kilometer</option>
+                    <select id=pUnits onchange="updateUnits();">
+                      <option value="1.609344">Mile</option>
+                      <option value="1">Km</option>
                     </select>
                   </td>
                 </tr>
               </table>  
             </td>
-            <td><input type="button" value="Find Pace" onclick="findPace();"></td>
+            <td class=findBtn><input type="button" value="Find" onclick="findPace();"></td>
           </tr>
           <tr>
             <td><input type="button" value="Reset" onclick="var thisform=document.forms[0]; thisform.reset()"></td>
@@ -83,7 +108,7 @@
     </div>
     <main>
       <h1>Because mod 60 is too difficult with tired legs</h1>
-      <p>Above is a basic running calculator. Hitting a 'find' button will calculate the desired field so long as the other two are filled in! Change the mile/km preferences as needed.</p>
+      <p>Above is a basic running calculator. Hitting a 'find' button will calculate the desired field (so long as the other two are filled in!) - change the mile/km preferences as needed.</p>
     </main>
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <script src='../../js/main.js'></script>

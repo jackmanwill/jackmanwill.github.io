@@ -4,16 +4,10 @@ var pace;
 
 var distUnit = 1.609344;
 var paceUnit = 1.609344;
-
-function example() {
-  var temp = document.getElementById("tsec").value;
-  document.getElementById("dist").value=temp;
-}
+var unitRatio=1;
 
 function findDistance() {
   if (checkDistance()) {
-    updateUnits();
-    var unitRatio = distUnit/paceUnit;
     dist=time/pace;
     dist=dist/unitRatio;
     document.getElementById("dist").value = dist;
@@ -32,6 +26,7 @@ function findTime() {
 function findPace() {
   if (checkPace()) {
     pace=time/dist;
+    pace=pace/unitRatio;
     document.getElementById("phr").value = timeH(pace);
     document.getElementById("pmin").value = timeM(pace);
     document.getElementById("psec").value = timeS(pace);
@@ -119,9 +114,14 @@ function timeS(t) {
   return secs;
 }
 
+function distanceSelected() {
+  dist = document.getElementById("predefinedDistances").value;
+  dist=dist/distUnit;
+  document.getElementById("dist").value=dist;
+}
+
 function updateUnits() {
-  var unitList = document.getElementById("dUnits");
-  distUnit = unitList.options[unitList.selectedIndex].value;
-  unitList = document.getElementById("pUnits");
-  paceUnit = unitList.options[unitList.selectedIndex].value;
+  distUnit = document.getElementById("dUnits").value;
+  paceUnit = document.getElementById("pUnits").value;
+  unitRatio = distUnit/paceUnit;
 }
