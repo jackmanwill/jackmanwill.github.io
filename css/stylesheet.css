@@ -261,7 +261,7 @@ table td tr td {
 }
 
 #distance>td:nth-child(2), #time>td:nth-child(2), #pace>td:nth-child(2) {
-  width: 20em;
+  width: 16.5em;
 }
 
 #distance {background-color: rgba(10, 100, 220, 0.8);}
