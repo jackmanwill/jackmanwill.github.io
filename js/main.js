@@ -1,10 +1,5 @@
-
-$.get("../navigation.html", function(data){
-  $("#navigation-placeholder").replaceWith(data);
-});
-
 const titleFontSize = parseInt($('.backgroundTitle').css("font-size")); //store the title font size
-const mobileWidth = 480
+const mobileWidth = 480;
 
 $(window).scroll(function() {
   //how far the user has scrolled (in px)

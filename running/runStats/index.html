@@ -13,7 +13,7 @@
       <form method="post">
         <table class=stats>
           <!-- Distance --> 
-          <tr id=distance>
+          <tr id=distance class=mainRow>
             <!-- Title -->
             <td>Distance:</td>
             <!-- Data Section -->
@@ -24,7 +24,7 @@
                     <input type="text" maxlength="10" id="dist">
                   </td>
                   <td>
-                    <select id=dUnits onchange="updateUnits();">
+                    <select id=dUnits onchange="updateDistanceUnit();">
                       <option value="1.609344">Miles</option>
                       <option value="1">Kms</option>
                     </select>
@@ -54,7 +54,7 @@
             </td>
           </tr>
           <!--Time-->
-          <tr id=time>
+          <tr id=time class=mainRow>
             <td>Time:</td>
             <td>
               <table>
@@ -75,7 +75,7 @@
             </td>  
           </tr>
           <!--Pace-->
-          <tr id=pace>
+          <tr id=pace class=mainRow>
             <td>Pace:</td>
             <td>
               <table>
@@ -90,7 +90,7 @@
                   <td><input id=pmin type="text" maxlength="2"></td>
                   <td><input id=psec type="text" maxlength="10"></td>
                   <td>
-                    <select id=pUnits onchange="updateUnits();">
+                    <select id=pUnits onchange="updatePaceUnit();">
                       <option value="1.609344">Mile</option>
                       <option value="1">Km</option>
                     </select>
