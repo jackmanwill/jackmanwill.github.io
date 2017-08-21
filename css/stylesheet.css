@@ -78,9 +78,10 @@ main p {
   width: 70%;
   margin: auto auto;
   text-align: justify;
-  font-size: 2vw;
+  font-size: 26px;
   overflow: scroll;
   padding: 5vh 0px 7.5vh 0px;
+  line-height: 150%;
 }
 
 .popNavigator {
