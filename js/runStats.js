@@ -14,7 +14,7 @@ function findDistance() {
       filledCount+=1;
       updateFindBtns();
     }
-    dist = time/pace;
+    dist = (time/pace)/unitRatio;
     document.getElementById("dist").value = dist;
   }
 }
@@ -26,7 +26,7 @@ function findTime() {
       filledCount+=1;
       updateFindBtns();
     }
-    time=dist*pace;
+    time=dist*pace*unitRatio;
     document.getElementById("thr").value = timeH(time);
     document.getElementById("tmin").value = timeM(time);
     document.getElementById("tsec").value = timeS(time);
