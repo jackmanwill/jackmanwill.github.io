@@ -1,11 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0px solid rgba(255,255,255,1);
+  border: 0px solid white;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: Baskerville, serif; 
 }
 
 .standardBackground {
-  height: 93.75vh; /*750px*/
+  height: 92vh; /*750px*/
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,27 +20,19 @@
   z-index: 0;
 }
 
-/*
-#home.standardBackground {
-  background-image: url('../images/background.jpg');
+#backgroundTitleBox {
+  height: 30vh;
+  position: relative;
 }
-
-#running.standardBackground {
-  background-image: url('../running/images/background.jpg');
-}
-
-#gallery.standardBackground {
-  background-image: url('../gallery/images/background.jpg');
-  background-position: bottom center;
-}
-*/
 
 .backgroundTitle {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   color: rgba(10, 10, 20, 0.5);
-  font-size: 42px;
+  font-size: 50px;
   font-variant: small-caps; 
   text-align: center;
-  padding-top: 22.5vh; /*180px*/
   padding-bottom: 1.25vh;
 }
 
@@ -47,18 +45,12 @@ h1 {
   font-weight: 400;
 }
 
-h3 {
+h3.subTitle {
   font-size: 25px;
   font-style: italic;
   font-weight: 400;
   text-align: center;
   letter-spacing: 2px;
-}
-
-body {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font-family: Baskerville, serif; 
 }
 
 main {
@@ -71,7 +63,7 @@ main {
 main h1 {
   padding-top: 7.5vh;
   text-align: center;
-  font-size: 3vw;
+  font-size: 40px;
 }
 
 main p {
@@ -88,7 +80,7 @@ main p {
   width: 100%;
   text-align: center; 
   position: absolute;
-  top: 96.825vh;
+  top: 96vh;
   z-index: 1500;
 }
 
@@ -184,6 +176,8 @@ main p {
 }
 
 .blogLibrary {
+  height: 33vh;
+  overflow: scroll;
   width: 90%;
   margin: 0 5%;  /*left/right should be consistent with the width i.e (100-width)/2*/
   background-color: rgba(0,0,0,0.4);
@@ -198,7 +192,6 @@ main p {
   padding: 1% 0;
   border-left: 1px solid black;
   border-color: rgba(10, 20, 30, 0.5);
-
 }
 
 #first {

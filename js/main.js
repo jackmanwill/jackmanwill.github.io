@@ -24,7 +24,7 @@ $(window).scroll(function() {
     var transitionPoint = parseFloat(data[3]);
     var scrollFixedPoint = parseFloat(data[4]);
     //if popNavigator displays as 2x2 we alter the accelerated speed to ensure bottom row scrolls far enough
-    if ($(window).width()<mobileWidth)
+    if ($(window).width()<=mobileWidth)
     {
       //if portrait - not needed yet since haven't decided what to do for landscape - but it works so that's something 
       if ($(window).width()<$(window).height())
@@ -80,7 +80,18 @@ $('.linkedBoxWriting').click(function() {                   /*bug fix - resets b
   $(this).find('.boxTitle').css({"padding-top": "45%"});
 });
 
-$('.bookTitle').click(function() {
-  $(this).siblings().toggle(400);
-  $(this).parent().siblings().children().not('.bookTitle').hide(1200);
-});
+if ($(window).width()>mobileWidth) {
+  $('.blogLibrary ul').hover(function() {
+    $(this).children().toggle(400);
+    });
+  $('.blogLibrary li').not('.bookTitle').click(function() {
+    $(this).parent().children().toggle();
+  });
+} 
+else 
+{
+  $('.blogLibrary ul').click(function() {
+    $(this).children().not('.bookTitle').toggle(400);
+    $(this).siblings().children().not('.bookTitle').hide(1200);
+  });
+}
