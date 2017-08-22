@@ -328,10 +328,11 @@ input#psec {width: 4em;}
     }
     
     main p {
-      font-size: 8vw;
+      font-size: 12px;
     }
+    
     main h1 {
-      font-size: 12vw; 
+      font-size: 20px; 
     }
     
   }
