@@ -92,6 +92,6 @@ else
 {
   $('.blogLibrary ul').click(function() {
     $(this).children().not('.bookTitle').toggle(400);
-    $(this).siblings().children().not('.bookTitle').hide(1200);
+    /*$(this).siblings().children().not('.bookTitle').hide(1200);*/
   });
 }

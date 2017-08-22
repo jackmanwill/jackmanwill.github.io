@@ -198,7 +198,7 @@ main p {
   padding: 1% 0;
   border-left: 1px solid black;
   border-color: rgba(10, 20, 30, 0.5);
-  display: inline-block;
+  display: block;
 }
 
 #first {
@@ -320,21 +320,25 @@ input#psec {width: 4em;}
     }
     
     .backgroundTitle {
-      font-size: 7vw;
+      font-size: 90px;
     }
     
     h3 {
-      font-size: 5vw;
+      font-size: 70px;
     }
     
     main p {
-      font-size: 20px;
+      font-size: 70px;
     }
     
     main h1 {
-      font-size: 30px; 
+      font-size: 90px; 
     }
     
+    .bloglibrary ul {
+      display: block;
+      float: none;
+    }
   }
   
 @media only screen and (max-device-width: 480px) and (orientation : portrait) {
