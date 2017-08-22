@@ -175,6 +175,12 @@ main p {
   background-color: rgba(0, 0, 0, 0.35);
 }
 
+
+/*--------------------------------------------------------------------------
+  ------------------------------------RUNNING BLOG--------------------------
+  --------------------------------------------------------------------------*/
+  
+
 .blogLibrary {
   height: 33vh;
   overflow: scroll;
@@ -192,6 +198,7 @@ main p {
   padding: 1% 0;
   border-left: 1px solid black;
   border-color: rgba(10, 20, 30, 0.5);
+  display: inline-block;
 }
 
 #first {
@@ -217,9 +224,11 @@ li.bookTitle {
   margin-left: 0.5em;
 }
 
-.blogLibrary {
-  display: inline-block;
-}
+
+/*--------------------------------------------------------------------------
+  ------------------------------------RUNNING STATS TABLE-------------------
+  --------------------------------------------------------------------------*/
+
 
 form {
   background-color: rgba(0, 0, 0, 0.5);
@@ -297,8 +306,14 @@ input#phr {width: 1.7em;}
 input#pmin {width: 1.7em;}
 input#psec {width: 4em;}
 
+
+/*--------------------------------------------------------------------------
+  -----------------------------RESPONSIVE DESIGN----------------------------
+  --------------------------------------------------------------------------*/
+
+
 /* for devices with display width less than, or equal to, 480px... */
-@media only screen and (max-device-width: 480px) and {
+@media only screen and (max-device-width: 480px) {
 
     .standardBackground {
       background-position: scroll; /*'fixed' doesn't work for iphones sadly - gives problems with background 'cover' sizing*/
