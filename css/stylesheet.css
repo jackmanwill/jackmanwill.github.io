@@ -53,6 +53,28 @@ h3.subTitle {
   letter-spacing: 2px;
 }
 
+div#subTitleBox {
+  width: 70vw;
+  margin: auto auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 8vw;
+}
+
+div.letterHolder {
+  position: relative;
+  float: left;
+  background-color: rgba(0, 0, 25, 0.5);
+  width: 14vw;
+  height: 14vw;
+}
+
+.letterHolder h3 {
+  position: relative;
+  margin: auto auto;
+  top: 1.5vw;
+}
+
 main {
   background-color: rgb(20, 25, 30);
   color: rgb(152, 145, 150);

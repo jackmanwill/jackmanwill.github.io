@@ -9,12 +9,57 @@
       <div id=backgroundTitleBox>
   	    <h1 class=backgroundTitle><a href="../index.html">WILLIAM JACKMAN</a></h1>
   	  </div>
-  	  <h3 class=subTitle>Mathematics.</h3>
+  	  <div id=subTitleBox>
+  	    <div class=letterHolder data-col="blue" data-top="32vh"> 
+  	       <h3>M</h3>
+  	    </div>
+  	    <div class=letterHolder data-col="yellow" data-top="25vh"> 
+  	       <h3>A</h3>
+  	    </div>
+  	    <div class=letterHolder data-col="green" data-top="38vh"> 
+  	       <h3>T</h3>
+  	    </div>
+  	    <div class=letterHolder data-col="red" data-top="5vh"> 
+  	       <h3>H</h3>
+  	    </div>
+  	    <div class=letterHolder data-col="purple" data-top="20vh"> 
+  	       <h3>S</h3>
+  	    </div>
+  	  </div>
+    </div>
+    <div class="popNavigator linkedBoxes superscroll" data-superscroll='["2", "0", "-0.5", "0.225", "0.4"]'>
+      <ul>
+        <li id=runningBox class=linkedBox>
+          <a href="project/index.html">
+            <div class=linkedBoxWriting>
+              <h2 class=boxTitle>Master's Project</h2>
+            </div>
+          </a>
+        </li>
+        <li id=galleryBox class=linkedBox>
+          <a href="gallery/index.html">
+            <div class=linkedBoxWriting>
+              <h2 class=boxTitle>Black Holes</h2>
+            </div>  
+          </a>
+        </li>
+        <li id=mathsBox class=linkedBox>
+          <a href="maths/index.html">
+            <div class=linkedBoxWriting>
+              <h2 class=boxTitle>Heat</h2>
+            </div>  
+          </a>
+        </li>
+        <li id=codeBox class=linkedBox>
+          <a href="code/index.html">
+            <div class=linkedBoxWriting>
+              <h2 class=boxTitle>Primes</h2>
+            </div>  
+          </a>
+        </li>
+      </ul>
     </div>
     <main>
-      <div class="superscroll" data-superscroll='["3", "0", "-0.5", "0.19", "0.26"]'>
-        Superscroll section- maths. <a href="project/index.html">project<a>
-      </div>
       <h1>Maths Title</h1>
       <p>It was a Sunday evening in London, gloomy, close, and stale. 
 Maddening church bells of all degrees of dissonance, sharp and 
@@ -35,5 +80,38 @@ Nothing to breathe but streets, streets, streets.</p>
     </main>
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <script src='../js/main.js'></script>
+    <script>
+      var alignPoint=18;
+      var alignPointDecimal="."+String(alignPoint);
+      var alignPointDelay=alignPoint+5;
+      var alignPointDelayDecimal="."+String(alignPointDelay);
+      var fastest=0;
+      $(document).ready( function() {
+        $('.letterHolder').each( function() {
+          var col = $(this).data('col');
+          var top = $(this).data('top');
+          $(this).css({"color":col, "top":top});
+          $(this).addClass('superscroll');
+          var superscroll= '["2", "0", "-0.5", "0.225", "0.4"]';
+          $(this).attr('data-superscroll',superscroll);
+          var speed = parseFloat(top[0] + top [1]);
+          speed/=alignPoint;
+          if (speed>fastest) {
+            fastest=speed;
+          }
+          $(this).data('superscroll')[0]=String(speed);
+          $(this).data('superscroll')[1]="-0.4";
+          $(this).data('superscroll')[2]="0";
+          $(this).data('superscroll')[3]=alignPointDecimal;
+          $(this).data('superscroll')[4]=alignPointDelayDecimal;
+        });
+        var nav = $('.popNavigator');
+        nav.data('superscroll')[0]=String(fastest);
+        nav.data('superscroll')[1]="0.3";
+        nav.data('superscroll')[2]="0";
+        nav.data('superscroll')[3]=alignPointDecimal;
+        nav.data('superscroll')[4]=alignPointDelayDecimal;
+      });
+    </script>
   </body>
 </html>
