@@ -84,7 +84,6 @@ main p {
   z-index: 1500;
 }
 
-
 .linkedBoxes {
   font-size: 0; /*eliminates gap between boxes*/
 }
@@ -97,54 +96,39 @@ main p {
   margin: auto auto;
 }
 
-#runningBox {
-  background: url("../images/running.jpg") no-repeat center bottom;
-  background-size: cover;
+.linkedBox:first-child:nth-last-child(1) {
+  width: 100%;
+  margin: 0;
 }
 
-#galleryBox {
-  background: url("../images/gallery.jpg") no-repeat center center;
-  background-size: cover;
+.linkedBox:first-child:nth-last-child(2),
+.linkedBox:first-child:nth-last-child(2) ~ .linkedBox {
+  width: calc(100% / 3); 
+  margin: 0 calc((100% / 3)/4);
 }
 
-#mathsBox {
-  background: url("../images/maths.png") no-repeat center center;
-  background-size: cover;
+.linkedBox:first-child:nth-last-child(3),
+.linkedBox:first-child:nth-last-child(3) ~ .linkedBox {
+  width: calc(100% / 4); 
+  margin: 0 calc((100% / 4)/6);
 }
 
-#codeBox {
-  background: url("../images/code.png") no-repeat center center;
-  background-size: cover;
-}
-
-#nzBox {
-  background: url("../gallery/images/nz.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-#londonBox {
-  background: url("../gallery/images/london.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-#brugesBox {
-  background: url("../gallery/images/bruges.jpg") no-repeat right bottom;
-  background-size: cover;
-}
-
-#athleticsBox {
-  background: url("../gallery/images/athletics.jpg") no-repeat center center;
-  background-size: cover;
+.linkedBox:first-child:nth-last-child(4),
+.linkedBox:first-child:nth-last-child(4) ~ .linkedBox {
+  width: calc(100% / 5); 
+  margin: 0 calc((100% / 5)/8);
 }
 
 .linkedBox {
-  color: white;
+  color: rgba(255, 255, 255, 0.95);
   text-align: center;
-  width: 20%;
-  padding-top: 20%;
-  margin: 0% 2.5%;
+  padding-top: 20%;    /*this gives box height as proportion of screen width*/
   position: relative;
   display: inline-block;
+}
+
+.linkedBox a {
+  color: inherit;
 }
 
 .linkedBox, .linkedBoxWriting{
@@ -164,7 +148,7 @@ main p {
 .linkedBoxWriting h2 {
   font-size: 3vw;
   text-transform: uppercase;
-  padding-top: 45%;
+  padding-top: 8vw;
 }
 
 .unShaded {
@@ -173,6 +157,32 @@ main p {
 
 #mathsBox .unShaded {
   background-color: rgba(0, 0, 0, 0.35);
+}
+
+#runningBox {
+  background: url("../images/running.jpg") no-repeat center bottom; 
+  background-size: cover;
+}
+#galleryBox {background: url("../images/gallery.jpg") no-repeat center center; 
+  background-size: cover;
+}
+#mathsBox {background: url("../images/maths.png") no-repeat center center; 
+  background-size: cover;
+}
+#codeBox {background: url("../images/code.png") no-repeat center center; 
+  background-size: cover;
+}
+#nzBox {background: url("../gallery/images/nz.jpg") no-repeat center center; 
+  background-size: cover;
+}
+#londonBox {background: url("../gallery/images/london.jpg") no-repeat center center; 
+  background-size: cover;
+}
+#brugesBox {background: url("../gallery/images/bruges.jpg") no-repeat right bottom; 
+  background-size: cover;
+}
+#athleticsBox {background: url("../gallery/images/athletics.jpg") no-repeat center center; 
+  background-size: cover;
 }
 
 

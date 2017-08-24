@@ -71,13 +71,13 @@ $('.linkedBoxWriting').hover(function() {
     $(this).toggleClass("unShaded");                        /*toggle shading on hover*/
   });
 $('.linkedBoxWriting').hover(function() {
-  $(this).find('.boxTitle').animate({paddingTop: "10%"});   /*movewriting up and down*/
+  $(this).find('.boxTitle').animate({paddingTop: "4vw"});   /*movewriting up and down*/
   }, function() {
-    $(this).find('.boxTitle').animate({paddingTop: "45%"});
+    $(this).find('.boxTitle').animate({paddingTop: "8vw"});
   });
 $('.linkedBoxWriting').click(function() {                   /*bug fix - resets box when clicked*/
   $(this).removeClass("unShaded");
-  $(this).find('.boxTitle').css({"padding-top": "45%"});
+  $(this).find('.boxTitle').css({"padding-top": "8vw"});
 });
 
 if ($(window).width()>mobileWidth) {
