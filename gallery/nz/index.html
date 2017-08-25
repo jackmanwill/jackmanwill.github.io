@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Zealand Gallery | William Jackman</title>
+    <link href="../../css/stylesheet.css" type="text/css" rel="stylesheet" >
+    <link href="../../lightbox/dist/css/lightbox.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class=galleryHeader>
+      <div class=backNav>
+        <a href="../index.html">BACK <br> &#x21b5</a>
+      </div>
+      <div class=wjHeader>
+        WILLIAM JACKMAN
+      </div>
+      <h1>New Zealand.</h1>
+    </header>
+    <main>
+      <div class="linkedBoxes gallery">
+        <ul>
+          <li id=nz1 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bird 1</h2>
+              </div>
+            </a>
+          </li>
+          <li id=nz2 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bird 2</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz3 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bird 3</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz4 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Rocks</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz5 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Milford 1</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz6 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Milford 2</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz7 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Milford 3</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz8 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Power</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz9 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Huge</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz10 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Vert</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz11 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Sweep</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=nz12 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Fall</h2>
+              </div>  
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script src='../../js/main.js'></script>
+    <script>
+          $(document).ready( function() {
+            $('.gallery a').each( function() {
+              $(this).attr("data-lightbox","album-set");
+              var id = $(this).parent().attr('id');
+              var image = "images/" + id + ".jpg";
+              $(this).attr("href", image);
+              var bg = "url(\"" + image + "\") no-repeat center center"
+              $(this).parent().css({"background":bg,"background-size":"cover"});
+            });
+          });
+    </script>
+    <script src="../../lightbox/dist/js/lightbox.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

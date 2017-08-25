@@ -30,7 +30,6 @@ body {
   position: absolute;
   bottom: 0;
   color: rgba(10, 10, 20, 0.5);
-  font-size: 50px;
   font-variant: small-caps; 
   text-align: center;
   padding-bottom: 1.25vh;
@@ -43,6 +42,7 @@ body {
 
 h1 {
   font-weight: 400;
+  font-size: 50px;
 }
 
 h3.subTitle {
@@ -111,34 +111,42 @@ main p {
 }
 
 .linkedBoxes ul {
-  width: 95%;
   list-style-type: none;
   overflow: hidden;
   text-align: center;
   margin: auto auto;
 }
 
-.linkedBox:first-child:nth-last-child(1) {
+.popNavigator .linkedBox:first-child:nth-last-child(1) {
   width: 100%;
   margin: 0;
 }
 
-.linkedBox:first-child:nth-last-child(2),
-.linkedBox:first-child:nth-last-child(2) ~ .linkedBox {
+.popNavigator .linkedBox:first-child:nth-last-child(2),
+.popNavigator .linkedBox:first-child:nth-last-child(2) ~ .linkedBox {
   width: calc(100% / 3); 
   margin: 0 calc((100% / 3)/4);
 }
 
-.linkedBox:first-child:nth-last-child(3),
-.linkedBox:first-child:nth-last-child(3) ~ .linkedBox {
+.popNavigator .linkedBox:first-child:nth-last-child(3),
+.popNavigator .linkedBox:first-child:nth-last-child(3) ~ .linkedBox {
   width: calc(100% / 4); 
   margin: 0 calc((100% / 4)/6);
 }
 
-.linkedBox:first-child:nth-last-child(4),
-.linkedBox:first-child:nth-last-child(4) ~ .linkedBox {
+.popNavigator .linkedBox:first-child:nth-last-child(4),
+.popNavigator .linkedBox:first-child:nth-last-child(4) ~ .linkedBox {
   width: calc(100% / 5); 
   margin: 0 calc((100% / 5)/8);
+}
+
+.gallery .linkedBox {
+  width: 25%;
+  padding-top: 25%;    /*gives box height (as proportion of container width)*/
+}
+
+.popNavigator .linkedBox {
+  padding-top: 20%;    /*gives box height (as proportion of container width)*/
 }
 
 .linkedBox {
@@ -153,8 +161,8 @@ main p {
   color: inherit;
 }
 
-.linkedBox, .linkedBoxWriting{
-  border-radius: 4px;
+.popNavigator .linkedBox, .popNavigator .linkedBoxWriting{
+  border-radius: 8px;
 }
 
 .linkedBoxWriting {
@@ -207,6 +215,51 @@ main p {
   background-size: cover;
 }
 
+header {
+  position: relative;
+}
+
+.galleryHeader {
+  background-color: rgb(50, 100, 150); 
+  text-align: center;
+}
+
+.galleryHeader h1 {
+  font-size: 70px;
+  font-weight: 800;
+  position: relative;
+  bottom: 0;
+  padding-bottom: .3em;
+  padding-top: 1.5em;
+}
+
+div.backNav {
+  position: absolute;
+  bottom:40%;
+  left:5%;
+  z-index:10;
+  background-color: rgba(20, 20, 40, 1);
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+}
+
+div.backNav a {
+  position: relative;
+  top: 25%;
+  margin: auto;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+div.wjHeader {
+  position: absolute;
+  bottom: 60%;
+  right: 5%;
+  font-size: 30px;
+  color: rgba(150, 150, 160, 1);
+}
 
 /*--------------------------------------------------------------------------
   ------------------------------------RUNNING BLOG--------------------------
