@@ -437,3 +437,9 @@ input#psec {width: 4em;}
       font-size: 6vw;
     }
   }
+  
+@media only screen and (max-device-width: 1200px) {
+    .linkedBoxWriting {
+      background-color: none;
+    }
+  }
