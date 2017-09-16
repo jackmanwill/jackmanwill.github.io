@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bruges Gallery | William Jackman</title>
+    <link href="../../css/stylesheet.css" type="text/css" rel="stylesheet" >
+    <link href="../../lightbox/dist/css/lightbox.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class=galleryHeader>
+      <div class=backNav>
+        <a href="../index.html">BACK <br> &#x21b5</a>
+      </div>
+      <div class=wjHeader>
+        WILLIAM JACKMAN
+      </div>
+      <h1>Bruges.</h1>
+    </header>
+    <main>
+      <div class="linkedBoxes gallery">
+        <ul>
+          <li id=br1 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Stepped</h2>
+              </div>
+            </a>
+          </li>
+          <li id=br2 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bike</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br3 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Tables</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br4 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Beer</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br5 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Cornered</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br6 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Garden</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br7 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bridge</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br8 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Canal</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br9 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Alley</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br10 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Blue</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br11 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Mill</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=br12 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Perfect</h2>
+              </div>  
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script src='../../js/main.js'></script>
+    <script>
+          $(document).ready( function() {
+            $('.gallery a').each( function() {
+              $(this).attr("data-lightbox","album-set");
+              var id = $(this).parent().attr('id');
+              var image = "images/" + id + ".jpg";
+              $(this).attr("href", image);
+              if (id=="ldn1")
+              {
+                var bg = "url(\"" + image + "\") no-repeat right center"
+              } 
+              else 
+              {
+                var bg = "url(\"" + image + "\") no-repeat center center"
+              }
+              $(this).parent().css({"background":bg,"background-size":"cover"});
+            });
+          });
+    </script>
+    <script src="../../lightbox/dist/js/lightbox.js"></script>
+  </body>
+</html>
