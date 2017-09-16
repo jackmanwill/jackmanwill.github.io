@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Athletics Gallery | William Jackman</title>
+    <link href="../../css/stylesheet.css" type="text/css" rel="stylesheet" >
+    <link href="../../lightbox/dist/css/lightbox.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class=galleryHeader>
+      <div class=backNav>
+        <a href="../index.html">BACK <br> &#x21b5</a>
+      </div>
+      <div class=wjHeader>
+        WILLIAM JACKMAN
+      </div>
+      <h1>Athletics.</h1>
+    </header>
+    <main>
+      <div class="linkedBoxes gallery">
+        <ul>
+          <li id=at1 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>5000m (w)</h2>
+              </div>
+            </a>
+          </li>
+          <li id=at2 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Stretch</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at3 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Stride</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at4 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Semenya</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at5 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>1500m (m)</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at6 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Ingebrigtsen</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at7 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>USA 1</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at8 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>USA 2</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at9 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>USA 3</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at10 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>GB</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at11 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bolt 1</h2>
+              </div>  
+            </a>
+          </li>
+          <li id=at12 class=linkedBox>
+            <a>
+              <div class=linkedBoxWriting>
+                <h2 class=boxTitle>Bolt 2</h2>
+              </div>  
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script src='../../js/main.js'></script>
+    <script>
+          $(document).ready( function() {
+            $('.gallery a').each( function() {
+              $(this).attr("data-lightbox","album-set");
+              var id = $(this).parent().attr('id');
+              var image = "images/" + id + ".jpg";
+              $(this).attr("href", image);
+              if (id=="ldn1")
+              {
+                var bg = "url(\"" + image + "\") no-repeat right center"
+              } 
+              else 
+              {
+                var bg = "url(\"" + image + "\") no-repeat center center"
+              }
+              $(this).parent().css({"background":bg,"background-size":"cover"});
+            });
+          });
+    </script>
+    <script src="../../lightbox/dist/js/lightbox.js"></script>
+  </body>
+</html>
